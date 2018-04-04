@@ -1,0 +1,2 @@
+deb http://ftp.daum.net/ubuntu/ xenial-proposed main restricted universe multiverse
+deb http://ftp.daum.net/ubuntu/ xenial-security main restricted universe multiverse

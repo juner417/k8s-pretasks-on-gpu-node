@@ -1,0 +1,23 @@
+---
+- hosts: kube-node:etcd
+  gather_facts: false
+  any_errors_fatal: true
+ 
+  vars_files:
+    - become-pass.yml
+
+  tasks:
+    - name: change source list
+      copy:
+        src: ./sources.list
+        dest: /etc/apt/sources.list
+        backup: yes
+        owner: root
+        group: root
+        mode: 0644
+      notify: apt update 
+  handlers:
+    - name: apt update
+      apt:
+        update_cache: yes
+    

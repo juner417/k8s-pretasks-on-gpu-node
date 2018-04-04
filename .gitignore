@@ -1,0 +1,4 @@
+password.sh
+logs/*
+become-pass.yml
+vault.pass
